@@ -16,7 +16,7 @@ header{
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background-color: transparent;
+    background-color: #2a2070;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,7 +58,7 @@ ul a:hover{
     font-size: 56px;
     font-weight: 700;
     max-width: 700px;
-    line-height: 1.2;
+    line-height: 1.5;
 
 }
 .home div h3{
@@ -68,11 +68,12 @@ ul a:hover{
     max-width: 700px;
 }
 .home div p{
-    font-size: 16px;
+    font-size: 18px;
+    text-align: justify;
     max-width: 500px;
     margin: 20px 0 40px;
 }
-section.home span img{
+img[src="imagens/foto minha.jpg"] {
     width: 100%;
     max-width: 500px;
     aspect-ratio: 1/1;
@@ -142,7 +143,6 @@ footer{
     width: 170px;
     display: flex;
     justify-content: space-between;
-
 }
 footer a{
     position: relative;
@@ -152,7 +152,7 @@ footer a{
     width: 40px;
     height: 40px;
     background-color: transparent;
-    border: 2px solid #725cfc;
+    border: 1px solid #725cfc;
     border-radius: 50%;
     font-size: 20px;
     color: #725cfc;
@@ -177,4 +177,130 @@ footer a::before{
 }
 footer a:hover::before{
     width: 100%;
+}
+
+.formacao{
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0 10%;
+    margin: 0 0 0 185px;
+    justify-content: flex-end;
+    top: calc(100vh - 200px); 
+    padding: 375px 0;
+    width: 80%    
+    
+
+}
+.formacao h1{
+    font-size: 56px;
+    font-weight: 700;
+    max-width: 700px;
+    line-height: 1.5;
+
+}
+.formacao h3, .formacao p {
+    max-width: 700px;
+  }
+  
+.formacao h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #725cfc;
+    margin-bottom: 5px;
+  }
+  
+.formacao p {
+    font-size: 18px;
+    text-align: justify;
+    margin-bottom: 10px;
+  }
+#principal {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1000px 0 50px 0;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+.portfolio article{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(270px , 1fr));
+    gap: 2rem;
+    max-width: 950px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+.caixa{
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #725cfc;
+    display: flex;
+    grid-template-rows: 1fr auto;
+    align-items: center;
+    border: 2px solid var(#725cfc);
+    box-shadow: var(#4635b3);
+}
+.img-port{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.img-port img{
+    width: 100%;
+    opacity: .5s;
+    height: 100%;
+    transition: .5s;
+}
+.cont-port{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: linear-gradient(rgba(0,0,0,.2),#725cfc);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    transition: 0.5s;
+    padding: 0 2rem;
+}
+.caixa:hover .cont-port{
+    opacity: 1;
+}
+
+.caixa:hover .img-port img{
+    transform: scale(1.1);
+}
+
+.cont-port h3{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.cont-port p{
+    font-size: .8rem;
+    margin: 5px 0 15px 0;
+}
+.cont-port a{
+    background: #ffff;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 50%;
+    border: 1px solid var(#725cfc);
+    outline: 2px solid #ffff;
+}
+.cont-port a i{
+    font-size: 1.2rem;
+    color: var(#725cfc);
 }
